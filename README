@@ -1,3 +1,7 @@
+===============================================================================
+
+  DESCRIPTION
+
 A small bash script to check the number of rules in the iptables and/or
 ip6tables ruleset.
 
@@ -9,7 +13,21 @@ policy is not ACCEPT (default ACCEPT is silly).
 
 ===============================================================================
 
-COPYRIGHT and LICENSE
+  REQUIREMENTS
+
+Requires support in iptables for the -S flag. This appeared somewhere between
+version 1.3.5 and 1.4.7
+
+The Makefile also currently expects to find both 'iptables' and 'ip6tables'
+binaries in your PATH, even if you don't intend to use both with this script.
+You should either:
+  1) Install both iptables and ip6tables
+  2) Manually edit the Makefile to remove the one your don't want from the 
+     DEP_BINS variable around line 5.
+
+===============================================================================
+
+  COPYRIGHT and LICENSE
 
 checkfw is Copyright (C) 2012 Phillip Smith <fukawi2 (at) gmail (dot) com>
 
