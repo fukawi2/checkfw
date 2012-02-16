@@ -37,10 +37,14 @@ _HELP_
 # make our path sane
 PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
+# constants for exit status
 E_OK=0
 E_WARNING=1
 E_CRITICAL=2
 E_UNKNOWN=3
+
+# are we root?
+[[ $EUID -ne 0 ]] && { echo "Got root?"; exit $E_UNKNOWN; }
 
 while getopts "46n:" opt; do
   case $opt in
