@@ -67,11 +67,11 @@ done
 # check our rule count
 if [[ $IPVER -eq 4 ]] ; then
 	# Test iptables v4
-	RULES_CNT=$(iptables -S INPUT | wc -l)
+	RULES_CNT=$(iptables-save | grep -c -- -A)
 	POLICY_ERRS=$(iptables -S | grep -E -- '-P (INPUT|FORWARD) ACCEPT')
 else
 	# Test iptables v6
-	RULES_CNT=$(iptables -S INPUT | wc -l)
+	RULES_CNT=$(ip6tables-save | grep -c -- -A)
 	POLICY_ERRS=$(ip6tables -S | grep -E -- '-P (INPUT|FORWARD) ACCEPT')
 fi
 
