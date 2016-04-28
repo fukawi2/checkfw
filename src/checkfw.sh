@@ -80,7 +80,7 @@ if [[ $RULES_CNT -lt $MIN_RULES ]] ; then
 	emsg="CRITICAL; $RULES_CNT IPv$IPVER rules! (Expected > $MIN_RULES)"
 	estat=$E_CRITICAL
 elif [[ -n "$POLICY_ERRS" ]] ; then
-	emsg="WARNING; $RULES_CNT IPv$IPVER rules. (Expected > $MIN_RULES)"
+	emsg="WARNING; INPUT and/or FORWARD policy is ACCEPT"
 	estat=$E_WARNING
 else
 	emsg="OK; $RULES_CNT IPv$IPVER rules. (Expected > $MIN_RULES)"
