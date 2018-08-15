@@ -10,7 +10,7 @@ D_DOC=/usr/local/share/doc/$(PROJECT)
 D_MAN=/usr/local/share/man
 
 ### Lists of files to be installed
-F_DOCS=README doc/LICENSE
+F_DOCS=README LICENSE
 F_MAN=man/*
 
 ###############################################################################
