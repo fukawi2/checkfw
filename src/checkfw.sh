@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################################################
-# Copyright (C) 2012 Phillip Smith
+# Copyright (C) 2012-2018 Phillip Smith
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ Options:
 	-4		Check iptables (IPv4)
 	-6		Check ip6tables (IPv6)
 _HELP_
-}   
+}
 
 # make our path sane
 PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
