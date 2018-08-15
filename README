@@ -3,7 +3,9 @@
   DESCRIPTION
 
 A small bash script to check the number of rules in the iptables and/or
-ip6tables ruleset.
+ip6tables ruleset. It will first check to see if firewalld is running and
+return success if it is. This way the same script can monitor hosts running
+firewalld as well as hosts with traditional iptables/ip6tables rulesets.
 
 Useful in conjuction with Nagios and NRPE to ensure firewalls have ruleset
 loaded.

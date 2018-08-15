@@ -64,6 +64,20 @@ while getopts "46n:" opt; do
   esac
 done
 
+# first check if firewalld is running; if so, we'll return OK
+if command -v firewall-cmd >/dev/null ; then
+  firewalld_state="$(firewall-cmd --state)"
+  if [[ "$firewalld_state" == 'running' ]] ; then
+    emsg="OK; firewalld is running"
+    estat=$E_OK
+  else
+    emsg="WARNING; firewalld state is '$firewalld_state'"
+    estat=$E_WARNING
+  fi
+  echo $emsg
+  exit $estat
+fi
+
 # check our rule count
 if [[ $IPVER -eq 4 ]] ; then
 	# Test iptables v4
