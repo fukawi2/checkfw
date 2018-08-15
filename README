@@ -24,14 +24,14 @@ The Makefile also currently expects to find both 'iptables' and 'ip6tables'
 binaries in your PATH, even if you don't intend to use both with this script.
 You should either:
   1) Install both iptables and ip6tables
-  2) Manually edit the Makefile to remove the one your don't want from the 
+  2) Manually edit the Makefile to remove the one your don't want from the
      DEP_BINS variable around line 5.
 
 ===============================================================================
 
   COPYRIGHT and LICENSE
 
-checkfw is Copyright (C) 2012 Phillip Smith <fukawi2 (at) gmail (dot) com>
+checkfw is Copyright (C) 2012,2018 Phillip Smith <fukawi2 (at) gmail (dot) com>
 
 This program is free software: you can redistribute it and/or imodify it under
 the terms of the GNU General Public License as published by the Free Software
